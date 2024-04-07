@@ -1,0 +1,58 @@
+[
+    {
+        "model": "stuff.categories",
+        "pk": 2,
+        "fields": {
+            "name": "��� ������",
+            "slug": "all"
+        }
+    },
+    {
+        "model": "stuff.categories",
+        "pk": 3,
+        "fields": {
+            "name": "����������",
+            "slug": "processory"
+        }
+    },
+    {
+        "model": "stuff.categories",
+        "pk": 4,
+        "fields": {
+            "name": "����������",
+            "slug": "videokarty"
+        }
+    },
+    {
+        "model": "stuff.categories",
+        "pk": 5,
+        "fields": {
+            "name": "����������� ������",
+            "slug": "operativnaya-pamyat"
+        }
+    },
+    {
+        "model": "stuff.categories",
+        "pk": 6,
+        "fields": {
+            "name": "������� �����",
+            "slug": "zhestkie-diski"
+        }
+    },
+    {
+        "model": "stuff.categories",
+        "pk": 7,
+        "fields": {
+            "name": "����������� �����",
+            "slug": "materinskie-platy"
+        }
+    },
+    {
+        "model": "stuff.categories",
+        "pk": 8,
+        "fields": {
+            "name": "����� �������",
+            "slug": "bloki-pitaniya"
+        }
+    }
+]
