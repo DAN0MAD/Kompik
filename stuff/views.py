@@ -20,37 +20,31 @@ def catalog(request, category_slug=None):
         
     else:
         stuff = get_list_or_404(Products.objects.filter(category__slug=category_slug))
-    
-    
+        
     if on_sale:
         stuff = stuff.filter(discount__gt=0)
-        
-        
+            
     if order_by and order_by != "default":
         stuff = stuff.order_by(order_by)
-    
    
-
-     
     paginator = Paginator(stuff,3)      
     current_page = paginator.page(int(page))
-        
-        
+         
     context = {
         "title": "Kompik - Каталог",
         "stuff": current_page,
         "slug_url": category_slug,
-        
+     
     }
     return render(request, "stuff/catalog.html", context)
 
-
-def product(request, product_slug):
+# контроллер поиска товаров
+def product(request, product_slug): 
     
-    product: Products = Products.objects.get(slug=product_slug)
+    product: Products = Products.objects.get(slug=product_slug) # получение slug продукта
     
-    context={
+    context={ #передача контекстных переменных
       'product': product  
     }
     
-    return render(request, "stuff/product.html", context=context)
+    return render(request, "stuff/product.html", context=context) #отображение необходимого контента
